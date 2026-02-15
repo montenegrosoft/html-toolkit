@@ -1,0 +1,14 @@
+.ms-auto-carousel {
+    -webkit-user-drag: none;
+    width: max-content;
+    will-change: transform;
+    cursor: grab;
+    user-select: none;
+    transform: translate3d(0, 0, 0);
+}
+
+.ms-auto-carousel * {
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-drag: none;
+}
