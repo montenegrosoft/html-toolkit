@@ -1,6 +1,6 @@
 (() => {
     document.addEventListener('click', function (e) {
-        const target = e.target.closest('a.ms-tr, button.ms-tr')
+        const target = e.target.closest('a.ms-ev, button.ms-ev')
         if (!target) return
 
         const metaEvent = target.getAttribute('data-ms-meta-event')

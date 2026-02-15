@@ -17,7 +17,7 @@
         const metaTestCode = document.querySelector('meta[name="ms-meta-test-code"]')?.content || null
         const gaMeasurementId = document.querySelector('meta[name="ms-ga-measurement-id"]')?.content || null
         const gadsConversionId = document.querySelector('meta[name="ms-gads-conversion-id"]')?.content || null
-        const apiUrl = document.querySelector('meta[name="ms-tr-api-url"]')?.content || null
+        const apiUrl = document.querySelector('meta[name="ms-ev-api-url"]')?.content || null
 
         if (metaPixelId) {
             (function (f, b, e, v, n, t, s) {
