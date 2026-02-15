@@ -59,7 +59,7 @@
 
 
         window.ms = window.ms || {}
-        window.ms.track = function ({ metaEvent, gaEvent, gadsConversionLabel, userData }) {
+        window.ms.event = function ({ metaEvent, gaEvent, gadsConversionLabel, userData }) {
             if (!metaEvent && !gaEvent && !gadsConversionLabel) return
 
             const eventId = uuid()

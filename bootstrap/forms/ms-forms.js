@@ -191,7 +191,7 @@
         if (
             (metaEvent || gaEvent || gadsConversionLabel) &&
             typeof window.ms !== 'undefined' &&
-            typeof window.ms.track === 'function'
+            typeof window.ms.event === 'function'
         ) {
             const userData = {
                 firstName: formData.first_name || null,
@@ -202,7 +202,7 @@
             }
 
             setTimeout(() => {
-                window.ms.track({ metaEvent, gaEvent, gadsConversionLabel, userData })
+                window.ms.event({ metaEvent, gaEvent, gadsConversionLabel, userData })
             }, 0)
         }
 

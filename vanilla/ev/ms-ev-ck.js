@@ -7,11 +7,14 @@
         const gaEvent = target.getAttribute('data-ms-ga-event')
         const gadsConversionLabel = target.getAttribute('data-ms-gads-conversion-label')
 
-        if (!metaEvent && !gaEvent && !gadsConversionLabel) return
-        if (typeof ms.track !== 'function') return
-
-        setTimeout(() => {
-            ms.track({ metaEvent, gaEvent, gadsConversionLabel })
-        }, 0)
+        if (
+            (metaEvent || gaEvent || gadsConversionLabel) &&
+            typeof window.ms !== 'undefined' &&
+            typeof window.ms.event === 'function'
+        ) {
+            setTimeout(() => {
+                window.ms.event({ metaEvent, gaEvent, gadsConversionLabel })
+            }, 0)
+        }
     })
 })()
