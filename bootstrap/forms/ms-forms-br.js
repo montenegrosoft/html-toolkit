@@ -234,7 +234,7 @@
 
         const successMessage = target.getAttribute('data-ms-success-message')
 
-        setMessage(message, 'success', successMessage || 'Form submitted successfully.')
+        setMessage(message, 'success', successMessage || 'Formulário enviado com sucesso.')
         setLocked(target, false)
 
         if (redirectUrl) location.href = redirectUrl
